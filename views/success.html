@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="live.css">
+		<script>
+			window.top.postMessage('{"name":"authorized", "token":"<%= token %>"}', '*')
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<h1>Success!</h1>
+		</div>
+	</body>
+</html>

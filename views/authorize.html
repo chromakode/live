@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="live.css">
+	</head>
+	<body onload="var e = document.getElementsByName('password'); if (e.length) { e[0].focus() }">
+		<div id="box">
+			<h1>Ready to go live?</h1>
+			<% if (!hasSession) { %>
+			<h2>Please enter your password.</h2>
+			<% } %>
+			<form action="authorize" method="post">
+				<% if (!hasSession) { %>
+				<label for="password">Password: </label>
+				<input type="password" name="password"/>
+				<br />
+				<% } %>
+				<input type="submit" value="Start" id="confirm"/>
+			</form>
+		</div>
+	</body>
+</html>
