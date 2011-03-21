@@ -2,10 +2,11 @@ body { margin:0; background:#ddd; font-family:sans-serif; font-size:1.25em; over
 h1, h2 { letter-spacing:-.05em; margin:0; }
 h1 { margin-top:.25em; }
 h2 { font-size:1.2em; font-weight:normal; color:#777; }
-form { margin:.5em; }
+form { margin-top:.5em; margin-bottom:0; }
 input { margin:.5em; }
 .icon { display:inline-block; border:7px solid #885; background:#bb7; color:white; font-size:70px; font-weight:bold; line-height:100px; width:100px; height:100px; border-radius:100px; }
 .icon.success { border-color:#595; background:#7a7; }
 .icon.failure { border-color:#955; background:#a77; }
-#box { text-align:center; position:absolute; top:50%; margin-top:-160px; height:300px; left:50%; margin-left:-210px; width:400px; padding:10px; }
+#container { display:table; text-align:center; width:100%; height:100%; }
+#box { display:table-cell; vertical-align:middle; padding:10px; }
 #confirm { font-size:1.5em; }

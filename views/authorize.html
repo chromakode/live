@@ -3,6 +3,7 @@
 		<link rel="stylesheet" href="live.css">
 	</head>
 	<body onload="var e = document.getElementsByName('password'); if (e.length) { e[0].focus() }">
+		<div id="container">
 		<div id="box">
 			<% if (!failure) { %>
 			<div class="icon">&#9733;</div>
@@ -25,6 +26,7 @@
 				<% } %>
 				<input type="submit" value="Start" id="confirm"/>
 			</form>
+		</div>
 		</div>
 	</body>
 </html>
