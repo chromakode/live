@@ -62,7 +62,10 @@ app.use(express.session({ secret:secret, cookie:{ secure: true }}));
 app.register('.html', require('ejs'));
 app.set('view options', { layout:false })
 app.get('/authorize', function(req, res) {
-	res.render('authorize.html', { hasSession: req.session.isPresenter });
+	res.render('authorize.html', {
+		failure: 'retry' in req.query,
+		hasSession: req.session.isPresenter
+	});
 })
 app.post('/authorize', function(req, res) {
 	function success() {

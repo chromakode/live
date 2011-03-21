@@ -4,9 +4,18 @@
 	</head>
 	<body onload="var e = document.getElementsByName('password'); if (e.length) { e[0].focus() }">
 		<div id="box">
+			<% if (!failure) { %>
+			<div class="icon">&#9733;</div>
+			<% } else { %>
+			<div class="icon failure">&#10005;</div>
+			<% } %>
 			<h1>Ready to go live?</h1>
-			<% if (!hasSession) { %>
+			<% if (hasSession) { %>
+			<h2>Your device has been recognized.</h2>
+			<% } else if (!failure) { %>
 			<h2>Please enter your password.</h2>
+			<% } else if (failure) { %>
+			<h2>Please try your password again.</h2>
 			<% } %>
 			<form action="authorize" method="post">
 				<% if (!hasSession) { %>
